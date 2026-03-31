@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum Plan {
+  FREE
+  PRO
+}
+
+enum ResumeStatus {
+  ACTIVE
+  ARCHIVED
+  DELETED
+}
+
+model User {
+  id               Int      @id @default(autoincrement())
+  clerkId          String   @unique
+  email            String   @unique
+  firstName        String?
+  lastName         String?
+  stripeCustomerId String?  @unique
+  subscriptionId   String?  @unique
+  plan             Plan     @default(FREE)
+  resumes          Resume[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Resume {
+  id        Int          @id @default(autoincrement())
+  title     String
+  template  String
+  data      Json
+  status    ResumeStatus @default(ACTIVE)
+  userId    Int
+  user      User         @relation(fields: [userId], references: [id])
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
