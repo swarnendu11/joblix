@@ -1,0 +1,24 @@
+﻿
+> frontend@0.1.0 lint
+> eslint
+
+
+C:\Users\swarn\OneDrive\Desktop\Joblix\frontend\src\app\checkout\page.tsx
+    5:10   warning  'Card' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+    5:16   warning  'CardContent' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  181:33   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  258:119  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  258:137  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  258:159  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\swarn\OneDrive\Desktop\Joblix\frontend\src\app\pricing\page.tsx
+   4:8   warning  'axios' is defined but never used                @typescript-eslint/no-unused-vars
+  12:10  warning  'API_URL' is defined but never used              @typescript-eslint/no-unused-vars
+  12:19  warning  'getAuthHeaders' is defined but never used       @typescript-eslint/no-unused-vars
+  32:23  warning  'getToken' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  32:33  warning  'userId' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  33:20  warning  'refresh' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  35:19  warning  'setLoading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 13 problems (3 errors, 10 warnings)
+
