@@ -1,0 +1,2 @@
+[builders.node]
+installDevDependencies = true
